@@ -144,6 +144,17 @@ app_license = "mit"
 # 		"on_trash": "method"
 # 	}
 # }
+after_install = [
+    "altibyan.install.after_install",
+    ]
+
+after_migrate = [
+    "altibyan.install.after_install",
+]
+
+domains = {
+    "Tebian" : "altibyan.domains.tebian",
+}
 
 # Scheduled Tasks
 # ---------------
