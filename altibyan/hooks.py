@@ -136,13 +136,23 @@ doctype_js = {"Sales Order" : "public/js/sales_order.js"}
 # Document Events
 # ---------------
 # Hook on document methods and events
+
 doc_events = {
 	"Batch": {
 		"before_save": "altibyan.controllers.batch.fetch_barcode",
 	},
     "Item" : {
         "before_insert": "altibyan.controllers.item.calculate_total",
-    }
+    },
+    "Sales Order":{
+        "on_submit":"altibyan.controllers.sales_order.on_submit"
+    },
+    "Customer":{
+        "before_insert":"altibyan.controllers.customer.before_insert"
+    },
+    "Supplier":{
+        "before_insert":"altibyan.controllers.supplier.before_insert"
+    },
 }
 after_install = [
     "altibyan.install.after_install",
