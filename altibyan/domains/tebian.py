@@ -10,7 +10,6 @@ data = {
                 "fieldtype":"Data",
                 "insert_after":"expiry_date",
                 "label":"Barcode",
-               
             },
         ],
 		'Sales Order':[
@@ -20,6 +19,15 @@ data = {
                 "insert_after":"scan_barcode",
                 "label":"Scan Batch Barcode",
                 "options":"Barcode"
+            },
+        ],
+		'Sales Order Item':[
+            {
+                "fieldname":"batch",
+                "fieldtype":"Link",
+                "insert_after":"item_name",
+                "label":"Batch",
+                "options":"Batch"
             },
         ],
 	},
