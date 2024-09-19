@@ -14,7 +14,7 @@ def make_matrial_request(self ):
 	if "Tebian" in DOMAINS:
 		items = self.get("items")
 		for item in items:
-			if item.projected_qty < 1:
+			if item.qty > item.actual_qty:
 				doc = frappe.new_doc("Material Request")
 				doc.material_request_type = "Manufacture"
 				doc.transaction_date = self.transaction_date
@@ -24,7 +24,7 @@ def make_matrial_request(self ):
 					"item_code":item.item_code,
 					"item_name": item.item_name,
 					"schedule_date":item.delivery_date,
-					"qty": item.qty,
+					"qty": item.qty - item.actual_qty,
 					"uom":item.uom
 				})
 				doc.save(ignore_permissions=True)
