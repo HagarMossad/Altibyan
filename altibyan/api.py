@@ -61,3 +61,4 @@ def send_whatsapp_message(to_number, message):
 		return response
 	else:
 		print(f"Failed to send message. Status code: {response.status_code}, Response: {response.text}")
+
