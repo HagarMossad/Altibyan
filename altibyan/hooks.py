@@ -140,7 +140,13 @@ doctype_js = {"Sales Order" : "public/js/sales_order.js"}
 doc_events = {
     "Sales Order":{
         "on_submit":"altibyan.controllers.sales_order.on_submit"
-    }
+    },
+    "Customer":{
+        "before_insert":"altibyan.controllers.customer.before_insert"
+    },
+    "Supplier":{
+        "before_insert":"altibyan.controllers.supplier.before_insert"
+    },
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
