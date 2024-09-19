@@ -136,14 +136,14 @@ doctype_js = {"Sales Order" : "public/js/sales_order.js"}
 # Document Events
 # ---------------
 # Hook on document methods and events
-
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Batch": {
+		"before_save": "altibyan.controllers.batch.fetch_barcode",
+	},
+    "Item" : {
+        "before_insert": "altibyan.controllers.item.calculate_total",
+    }
+}
 after_install = [
     "altibyan.install.after_install",
     ]
@@ -188,7 +188,9 @@ domains = {
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "altibyan.event.get_events"
 # }
-#
+override_whitelisted_methods = {
+	# "erpnext.stock.utils.scan_barcode": "altibyan.api.scan_batch_barcode"
+}
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps

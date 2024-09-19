@@ -7,38 +7,57 @@ data = {
 		'Batch':[
             {
                 "fieldname":"barcode",
-                "fieldtype":"Data",
+                "fieldtype":"Barcode",
                 "insert_after":"expiry_date",
                 "label":"Barcode",
+                "read_only" : 1
+            },
+			{
+                "fieldname":"item_barcode",
+                "fieldtype":"Barcode",
+                "insert_after":"manufacturing_date",
+                "label":"Item Barcode",
+                "read_only" : 1
             },
         ],
-		'Sales Order':[
+		'Item':[	
+                {
+				"label": "Width",
+				"fieldname": "width",
+				"fieldtype": "Float",
+				"insert_after": "stock_uom" ,
+                "read_only" : 1
+				},
+                {
+				"label": "Length",
+				"fieldname": "length",
+				"fieldtype": "Float",
+				"insert_after": "width" ,
+				"read_only" : 1
+				},
+                {
+				"label": "Height",
+				"fieldname": "height",
+				"fieldtype": "Float",
+				"insert_after": "length" ,
+				"read_only" : 1
+				},
+                {
+					"label": "Total",
+					"fieldname": "total",
+					"fieldtype": "Float",
+					"insert_after": "height" ,
+					"read_only" : 1
+				}
+		],
+		'Stock Settings':[
             {
-                "fieldname":"scan_batch_barcode",
-                "fieldtype":"Data",
-                "insert_after":"scan_barcode",
-                "label":"Scan Batch Barcode",
-                "options":"Barcode"
-            },
-        ],
-		'Sales Order Item':[
-            {
-                "fieldname":"batch",
+                "fieldname":"default_uom",
                 "fieldtype":"Link",
-                "insert_after":"item_name",
-                "label":"Batch",
-                "options":"Batch"
+                "insert_after":"item_group",
+                "label":"Default UOM",
+                "options" : "UOM"
             },
         ],
-	},
-		"properties": [
-		{
-			"doctype": "Sales Order",
-			"doctype_or_field": "DocField",
-			"fieldname": "scan_barcode",
-			"property": "hidden",
-			"property_type": "Check",
-			"value": "1"
-        },
-	],  
+	},  
 }
