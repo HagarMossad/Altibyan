@@ -137,13 +137,17 @@ doctype_js = {"Sales Order" : "public/js/sales_order.js"}
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
+doc_events = {
+    "Sales Order":{
+        "on_submit":"altibyan.controllers.sales_order.on_submit"
+    }
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 # 	}
-# }
+}
+
 after_install = [
     "altibyan.install.after_install",
     ]
