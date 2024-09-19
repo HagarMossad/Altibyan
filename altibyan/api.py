@@ -22,6 +22,8 @@ def send_sms_message(to_number, message):
 	password = doc.password
 	sendername = doc.sendername
 	message = message
+	if not (username or password or sendername ):
+		frappe.throw("Please Enter Configration to send a message")
 
 
 	url = f"""{doc.sms_url}?username={username}&password={password}&sendername={sendername}&mobiles={to_number}&message={message}"""
@@ -35,6 +37,8 @@ def send_sms_message(to_number, message):
 
 def send_whatsapp_message(to_number, message):
 	doc = frappe.get_doc("Messages Integrations")
+	if not (doc.production_id or doc.phone_id or doc.whatsapp_url ):
+		frappe.throw("Please Enter Configration to send a message")
 	production_id = doc.production_id
 	phone_id = doc.phone_id
 	url = f"""{doc.whatsapp_url}/{production_id}/{phone_id}/sendMessage"""
