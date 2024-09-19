@@ -54,14 +54,14 @@ data = {
                 "label":"Barcode",
                 "read_only" : 1
             },
-<<<<<<< hagar
+
 			{
                 "fieldname":"item_barcode",
                 "fieldtype":"Barcode",
                 "insert_after":"manufacturing_date",
                 "label":"Item Barcode",
                 "read_only" : 1
-=======
+            }
         ],
         'Customer':[
             {
@@ -139,7 +139,6 @@ data = {
                 "insert_after":"scan_barcode",
                 "label":"Scan Batch Barcode",
                 "options":"Barcode"
->>>>>>> master
             },
         ],
 		'Item':[	
@@ -170,21 +169,7 @@ data = {
 					"fieldtype": "Float",
 					"insert_after": "height" ,
 					"read_only" : 1
-				}
-		],
-		'Stock Settings':[
-            {
-                "fieldname":"default_uom",
-                "fieldtype":"Link",
-                "insert_after":"item_group",
-                "label":"Default UOM",
-                "options" : "UOM"
-            },
-        ],
-<<<<<<< hagar
-	},  
-=======
-        'Item':[	
+				},
                 {
 				"label": "Weight Rate",
 				"fieldname": "weight_rate",
@@ -197,8 +182,19 @@ data = {
 				"fieldtype": "Check",
 				"insert_after": "weight_rate" ,
 				},
-			],
+		],
+		'Stock Settings':[
+            {
+                "fieldname":"default_uom",
+                "fieldtype":"Link",
+                "insert_after":"item_group",
+                "label":"Default UOM",
+                "options" : "UOM"
+            },
+        ],
 	},
+      
+        
 		"properties": [
 		{
 			"doctype": "Sales Order",
@@ -209,5 +205,5 @@ data = {
 			"value": "1"
         },
 	],  
->>>>>>> master
 }
+	
