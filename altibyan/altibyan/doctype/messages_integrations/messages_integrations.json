@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-19 16:34:36.044154",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sms_integration_section",
+  "sms_url",
+  "username",
+  "password",
+  "sendername",
+  "whatsapp_integration_section",
+  "whatsapp_url",
+  "production_id",
+  "phone_id",
+  "token"
+ ],
+ "fields": [
+  {
+   "fieldname": "sms_integration_section",
+   "fieldtype": "Section Break",
+   "label": "SMS Integration"
+  },
+  {
+   "fieldname": "whatsapp_integration_section",
+   "fieldtype": "Section Break",
+   "label": "Whatsapp Integration"
+  },
+  {
+   "fieldname": "whatsapp_url",
+   "fieldtype": "Data",
+   "label": "WhatsApp url"
+  },
+  {
+   "fieldname": "production_id",
+   "fieldtype": "Data",
+   "label": "Production ID"
+  },
+  {
+   "fieldname": "phone_id",
+   "fieldtype": "Data",
+   "label": "Phone ID"
+  },
+  {
+   "fieldname": "token",
+   "fieldtype": "Data",
+   "label": "Token"
+  },
+  {
+   "fieldname": "sms_url",
+   "fieldtype": "Data",
+   "label": "SMS url"
+  },
+  {
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "label": "Username"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "label": "Password"
+  },
+  {
+   "fieldname": "sendername",
+   "fieldtype": "Data",
+   "label": "Sender name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-09-19 16:56:43.987771",
+ "modified_by": "Administrator",
+ "module": "Altibyan",
+ "name": "Messages Integrations",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
