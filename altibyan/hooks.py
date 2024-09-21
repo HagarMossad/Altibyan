@@ -153,6 +153,9 @@ doc_events = {
     "Supplier":{
         "before_insert":"altibyan.controllers.supplier.before_insert"
     },
+    "Landed Cost Voucher":{
+        "validate": "altibyan.controllers.landed_cost.validate"
+    },
 }
 after_install = [
     "altibyan.install.after_install",
