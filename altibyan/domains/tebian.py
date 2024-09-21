@@ -71,13 +71,13 @@ data = {
                 "label":_("Naming"),
                 "read_only":1
             },
-            {
-				"label": "Categories",
-				"fieldname": "categories",
-				"fieldtype": "Link",
-                "options":"Categories",
-				"insert_after": "market_segment" ,
-            },
+            # {
+			# 	"label": "Categories",
+			# 	"fieldname": "categories",
+			# 	"fieldtype": "Link",
+            #     "options":"Categories",
+			# 	"insert_after": "market_segment" ,
+            # },
             {
 				"label": "Commerical Number",
 				"fieldname": "commerical_number",
@@ -89,6 +89,16 @@ data = {
 				"fieldname": "customer_name_in_english",
 				"fieldtype": "Data",
 				"insert_after": "customer_name" ,
+            },
+		],
+		'Landed Cost Item':[
+            {
+                "fieldname":"percent",
+                "fieldtype":"Percent",
+                "insert_after":"amount",
+                "label":"Percentage",
+                "read_only_depends_on": "eval:parent.distribute_charges_based_on != 'Percent' ;",
+                "mandatory_depends_on": "eval:parent.distribute_charges_based_on == 'Percent' ;",
             },
         ],
         "Customer Group":[
@@ -196,6 +206,14 @@ data = {
       
         
 		"properties": [
+		{
+            "doctype": "Landed Cost Voucher",
+			"doctype_or_field": "DocField",
+			"fieldname": "distribute_charges_based_on",
+			"property": "options",
+			"property_type": "Small Text",
+			"value": "Qty\nAmount\nPercent\nDistribute Manually"
+        },
 		{
 			"doctype": "Sales Order",
 			"doctype_or_field": "DocField",
