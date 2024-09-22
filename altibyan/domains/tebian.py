@@ -202,6 +202,50 @@ data = {
                 "options" : "UOM"
             },
         ],
+        'Delivery Note':[
+            {
+                "fieldname":"send_otp",
+                "fieldtype":"Select",
+                "insert_after":"is_return",
+                "label":"OTP",
+                "options":"\nSMS\nWhatsapp"
+            },
+            {
+                "fieldname":"otp",
+                "fieldtype":"Data",
+                "insert_after":"send_otp",
+                "label":"OTP",
+                "hidden":1
+            },
+            {
+                "fieldname":"verification_otp",
+                "fieldtype":"Data",
+                "insert_after":"is_return",
+                "label":_("Verification OTP"),
+            },
+        ],
+        'Sales Invoice':[
+            {
+                "fieldname":"send_otp",
+                "fieldtype":"Select",
+                "insert_after":"is_debit_note",
+                "label":"OTP",
+                "options":"\nSMS\nWhatsapp"
+            },
+            {
+                "fieldname":"otp",
+                "fieldtype":"Data",
+                "insert_after":"send_otp",
+                "label":"OTP",
+                "hidden":1
+            },
+            {
+                "fieldname":"verification_otp",
+                "fieldtype":"Data",
+                "insert_after":"is_return",
+                "label":_("Verification OTP"),
+            },
+        ],
 	},
       
         

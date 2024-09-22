@@ -7,7 +7,8 @@ DOMAINS = frappe.get_active_domains()
 
 frappe.whitelist()
 def before_insert(self , method , *args, **kwargs):
-	make_supplier_name(self)
+	if "Tebian" in DOMAINS:
+		make_supplier_name(self)
 		
 
 def make_supplier_name(self):

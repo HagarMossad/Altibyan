@@ -33,6 +33,7 @@ def send_sms_message(to_number, message):
 		return r
 	else:
 		print(f"Failed to send message. Status code: {r.status_code}, Response: {r.text}")
+		return r
 
 def send_whatsapp_message(to_number, message):
 	doc = frappe.get_doc("Messages Integrations")
@@ -60,3 +61,4 @@ def send_whatsapp_message(to_number, message):
 		return response
 	else:
 		print(f"Failed to send message. Status code: {response.status_code}, Response: {response.text}")
+		return response

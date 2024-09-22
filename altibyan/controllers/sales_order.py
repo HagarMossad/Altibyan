@@ -7,7 +7,8 @@ DOMAINS = frappe.get_active_domains()
 
 frappe.whitelist()
 def on_submit(self , method , *args, **kwargs):
-	make_matrial_request(self)
+	if "Tebian" in DOMAINS:
+		make_matrial_request(self)
 
 
 def make_matrial_request(self ):

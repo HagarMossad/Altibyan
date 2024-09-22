@@ -5,6 +5,12 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "active_for_doctype_section",
+  "delivery_note",
+  "column_break_yrxu",
+  "payment_entry",
+  "column_break_pgyy",
+  "sales_invoice",
   "sms_integration_section",
   "sms_url",
   "username",
@@ -66,12 +72,43 @@
    "fieldname": "sendername",
    "fieldtype": "Data",
    "label": "Sender name"
+  },
+  {
+   "fieldname": "active_for_doctype_section",
+   "fieldtype": "Section Break",
+   "label": "Active For Doctype"
+  },
+  {
+   "default": "0",
+   "fieldname": "delivery_note",
+   "fieldtype": "Check",
+   "label": "Delivery Note"
+  },
+  {
+   "fieldname": "column_break_yrxu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "payment_entry",
+   "fieldtype": "Check",
+   "label": "Payment Entry"
+  },
+  {
+   "fieldname": "column_break_pgyy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sales_invoice",
+   "fieldtype": "Check",
+   "label": "Sales Invoice"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2024-09-19 16:56:43.987771",
+ "modified": "2024-09-22 12:44:29.554800",
  "modified_by": "Administrator",
  "module": "Altibyan",
  "name": "Messages Integrations",
