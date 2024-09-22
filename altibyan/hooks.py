@@ -156,6 +156,14 @@ doc_events = {
     "Landed Cost Voucher":{
         "validate": "altibyan.controllers.landed_cost.validate"
     },
+    "Delivery Note":{
+        "validate": "altibyan.controllers.delivery_note.validate",
+        "on_submit":"altibyan.controllers.delivery_note.on_submit"
+    },
+    "Sales Invoice":{
+        "validate": "altibyan.controllers.sales_invoice.validate",
+        "on_submit":"altibyan.controllers.sales_invoice.on_submit"
+    },
 }
 after_install = [
     "altibyan.install.after_install",
