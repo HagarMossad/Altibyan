@@ -1,24 +1,51 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{name_in_arabic}",
  "creation": "2024-09-23 11:15:57.377928",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_gspb"
+  "name_in_arabic",
+  "liability_section",
+  "from",
+  "column_break_qefg",
+  "to"
  ],
  "fields": [
   {
-   "fieldname": "section_break_gspb",
-   "fieldtype": "Section Break"
+   "fieldname": "name_in_arabic",
+   "fieldtype": "Data",
+   "label": "Name In Arabic",
+   "unique": 1
+  },
+  {
+   "fieldname": "liability_section",
+   "fieldtype": "Section Break",
+   "label": "liability"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Percent",
+   "label": "From"
+  },
+  {
+   "fieldname": "column_break_qefg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Percent",
+   "label": "To"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-23 11:15:57.377928",
+ "modified": "2024-09-23 11:32:36.824506",
  "modified_by": "Administrator",
  "module": "Altibyan",
  "name": "Customer Classification",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
