@@ -180,7 +180,7 @@ domains = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"altibyan.tasks.all"
 # 	],
@@ -193,10 +193,10 @@ domains = {
 # 	"weekly": [
 # 		"altibyan.tasks.weekly"
 # 	],
-# 	"monthly": [
-# 		"altibyan.tasks.monthly"
-# 	],
-# }
+	"monthly": [
+		"altibyan.controllers.customer.class_classification"
+	],
+}
 
 # Testing
 # -------

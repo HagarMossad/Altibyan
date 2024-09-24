@@ -65,9 +65,17 @@ data = {
         ],
         'Customer':[
             {
+                "fieldname":"customer_classification",
+                "fieldtype":"Select",
+                "options":"\nDistinguished Customer\nContinuing Customer\nLate Customer\nDefaulting Customer\nStopped Customer",
+                "insert_after":"customer_group",
+                "label":_("Customer Classification"),
+                "read_only":1
+            },
+            {
                 "fieldname":"naming",
                 "fieldtype":"Data",
-                "insert_after":"customer_group",
+                "insert_after":"customer_classification",
                 "label":_("Naming"),
                 "read_only":1
             },
