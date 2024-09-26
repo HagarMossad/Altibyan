@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2024-09-25 14:29:55.509004",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "gl_btn",
+  "accepted_",
+  "refused_",
+  "feedback"
+ ],
+ "fields": [
+  {
+   "fieldname": "gl_btn",
+   "fieldtype": "Button",
+   "label": "\u0643\u0634\u0641 \u0627\u0644\u062d\u0633\u0627\u0628"
+  },
+  {
+   "fieldname": "feedback",
+   "fieldtype": "Long Text",
+   "label": "Feedback"
+  },
+  {
+   "default": "0",
+   "fieldname": "accepted_",
+   "fieldtype": "Check",
+   "label": "Accepted"
+  },
+  {
+   "default": "0",
+   "fieldname": "refused_",
+   "fieldtype": "Check",
+   "label": "Refused"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-25 14:39:54.588372",
+ "modified_by": "Administrator",
+ "module": "Altibyan",
+ "name": "Monthly Account Statement",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
