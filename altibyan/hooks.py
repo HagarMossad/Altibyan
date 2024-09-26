@@ -164,6 +164,9 @@ doc_events = {
         "validate": "altibyan.controllers.sales_invoice.validate",
         "on_submit":"altibyan.controllers.sales_invoice.on_submit"
     },
+    "Monthly Account Statement":{
+        "on_submit":"altibyan.controllers.monthly_account_statement.on_submit"
+    }
 }
 after_install = [
     "altibyan.install.after_install",
