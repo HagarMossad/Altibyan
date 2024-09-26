@@ -8,9 +8,12 @@
  "field_order": [
   "customer",
   "gl_btn",
+  "sms_btn",
+  "whats_btn",
   "accepted_",
   "refused_",
-  "feedback"
+  "feedback",
+  "amended_from"
  ],
  "fields": [
   {
@@ -41,11 +44,32 @@
    "label": "Customer",
    "options": "Customer",
    "unique": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Monthly Account Statement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "sms_btn",
+   "fieldtype": "Button",
+   "label": "Send SMS"
+  },
+  {
+   "fieldname": "whats_btn",
+   "fieldtype": "Button",
+   "label": "Send Whatsapp"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-09-25 14:39:54.588372",
+ "modified": "2024-09-26 12:39:45.469607",
  "modified_by": "Administrator",
  "module": "Altibyan",
  "name": "Monthly Account Statement",
