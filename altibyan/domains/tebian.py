@@ -232,6 +232,28 @@ data = {
                 "label":_("Verification OTP"),
             },
         ],
+        'Payment Entry':[
+            {
+                "fieldname":"send_otp",
+                "fieldtype":"Select",
+                "insert_after":"posting_date",
+                "label":"OTP",
+                "options":"\nSMS\nWhatsapp"
+            },
+            {
+                "fieldname":"otp",
+                "fieldtype":"Data",
+                "insert_after":"send_otp",
+                "label":"OTP",
+                "hidden":1
+            },
+            {
+                "fieldname":"verification_otp",
+                "fieldtype":"Data",
+                "insert_after":"otp",
+                "label":_("Verification OTP"),
+            },
+        ],
         'Sales Invoice':[
             {
                 "fieldname":"send_otp",
