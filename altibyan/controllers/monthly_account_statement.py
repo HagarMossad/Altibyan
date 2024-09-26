@@ -11,7 +11,6 @@ def send_whattsapp(name, customer):
         base_url = frappe.utils.get_url()
     
         doc_link = f"{base_url}/app/monthly_account_statement/{name}"
-        
         send_whatsapp_message( to_number, doc_link )
 
 
@@ -23,7 +22,6 @@ def send_sms(name, customer):
         base_url = frappe.utils.get_url()
     
         doc_link = f"{base_url}/app/monthly_account_statement/{name}"
-        
         send_sms_message( to_number, doc_link )
 
 

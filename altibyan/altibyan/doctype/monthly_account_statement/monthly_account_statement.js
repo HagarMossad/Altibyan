@@ -6,19 +6,19 @@ frappe.ui.form.on("Monthly Account Statement", {
        console.log("hhhhh");
 	},
     gl_btn: function(frm) {
-
         let today = new Date();
         let from_date = new Date();
         from_date.setDate(today.getDate() - 30);
-        
+
         let formatted_today = frappe.datetime.get_today();
-        let formatted_from_date = frappe.datetime.strftime(from_date, '%Y-%m-%d');
-        console.log(today)
-        frappe.set_route('query-report', 'General Ledger', {
-            "customer": frm.doc.customer,  
+        let formatted_from_date = moment(from_date).format('YYYY-MM-DD');
+
+        console.log(frm.doc.customer)
+
+        frappe.set_route('query-report', 'Customer Ledger Summary', {
+            "party": frm.doc.customer,
             "to_date": formatted_today,
             "from_date": formatted_from_date,
-            "party_type": "Customer" ,
         });
     },
     sms_btn: function(frm) {
