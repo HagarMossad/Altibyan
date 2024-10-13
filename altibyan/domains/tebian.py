@@ -209,6 +209,12 @@ data = {
                 "label":"Default UOM",
                 "options" : "UOM"
             },
+            {
+                "fieldname":"unit_number",
+                "fieldtype":"Float",
+                "insert_after":"default_uom",
+                "label":"Unit Number",
+            },
         ],
         'Delivery Note':[
             {
