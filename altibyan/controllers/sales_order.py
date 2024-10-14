@@ -17,7 +17,7 @@ def make_matrial_request(self ):
 		for item in items:
 			if item.qty > item.actual_qty:
 				doc = frappe.new_doc("Material Request")
-				doc.material_request_type = "Manufacture"
+				doc.material_request_type = "Cuting"
 				doc.transaction_date = self.transaction_date
 				doc.schedule_date = self.delivery_date
 				doc.set_warehouse = self.set_warehouse

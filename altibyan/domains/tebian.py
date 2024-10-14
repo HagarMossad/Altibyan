@@ -45,6 +45,15 @@ data = {
 				"fieldtype": "Check",
 				"insert_after": "total_weight" ,
 				},
+                {
+				"label": "Scrap Item",
+				"fieldname": "scrap_item",
+				"fieldtype": "Link",
+                "options" : "Item" ,
+				"insert_after": "calculate_weight" ,
+                "fetch_from": "item_code.scrap_item"
+
+				},
 			],
 		'Batch':[
             {
@@ -194,11 +203,18 @@ data = {
 				"fieldtype": "Float",
 				"insert_after": "stock_uom" ,
 				},
-                 {
+                {
 				"label": "Calculate Weight",
 				"fieldname": "calculate_weight",
 				"fieldtype": "Check",
 				"insert_after": "weight_rate" ,
+				},
+                {
+				"label": "Scrap Item",
+				"fieldname": "scrap_item",
+				"fieldtype": "Link",
+                "options" : "Item" ,
+				"insert_after": "calculate_weight" ,
 				},
 		],
 		'Stock Settings':[
@@ -293,6 +309,14 @@ data = {
 			"property": "options",
 			"property_type": "Small Text",
 			"value": "Qty\nAmount\nPercent\nDistribute Manually"
+        },
+        {
+            "doctype": "Material Request",
+			"doctype_or_field": "DocField",
+			"fieldname": "material_request_type",
+			"property": "options",
+			"property_type": "Small Text",
+			"value": "Purchase\nMaterial Transfer\nMaterial Issue\nManufacture\nCustomer Provided\nCuting"
         },
 		{
 			"doctype": "Sales Order",
