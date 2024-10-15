@@ -26,7 +26,8 @@ def make_matrial_request(self ):
 					"item_name": item.item_name,
 					"schedule_date":item.delivery_date,
 					"qty": item.qty - item.actual_qty,
-					"uom":item.uom
+					"uom":item.uom ,
+					"sales_order" : self.name
 				})
 				doc.save(ignore_permissions=True)
 				doc.submit()

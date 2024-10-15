@@ -298,6 +298,16 @@ data = {
                 "label":_("Verification OTP"),
             },
         ],
+        'Stock Entry':[
+            {
+            "fieldname":"material_request",
+            "fieldtype":"Link",
+            "insert_after":"total_outgoing_value",
+            "label":"Material Request",
+            "options" : "Material Request" ,
+            "read_only" : 1
+            },
+        ],
 	},
       
         
